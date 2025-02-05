@@ -18,11 +18,13 @@ default_args = {
     "retry_delay":timedelta(minutes=5)
 }
 
+# DAG 정의
 dag = DAG(
-    "First_Airflow_Practice",
-    default_args = default_args,
-    description = "my airflow",
-    schedule_interval = timedelta(days=1)
+    "first_airflow_practice",  # DAG ID (공백 금지)
+    default_args=default_args,
+    description="My airflow DAG",
+    schedule_interval=timedelta(days=1),
+    tags=["example", "practice", "test"]
 )
 
 input_words = "python very easy, airflow more.... ^^"
