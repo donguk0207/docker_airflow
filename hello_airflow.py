@@ -25,7 +25,7 @@ dag = DAG(
     schedule_interval = timedelta(days=1)
 )
 
-input_words = "python very easy, airflow more . . . . "
+input_words = "python very easy, airflow more.... ^^"
 
 def review_word(word):
     print(word)
